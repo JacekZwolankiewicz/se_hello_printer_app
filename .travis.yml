@@ -7,3 +7,9 @@ install:
 # command to run tests
 script:
   - make test
+# Docker build
+after_success:
+  -make docker_build
+language: python
+services:
+   -docker
