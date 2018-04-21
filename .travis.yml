@@ -13,3 +13,8 @@ after_success:
 language: python
 services:
    -docker
+deploy:
+  provider: heroku
+  app: radiant-temple-81339
+  api_key: ${HEROKU_API_KEY}
+  
