@@ -7,12 +7,9 @@ install:
 # command to run tests
 script:
   - make test
-#Docker build
-after_success:
-  -make docker_build
-language: python
+  - make docker_build
 services:
-  -docker
+  - docker
 deploy:
   provider: heroku
   app: radiant-temple-81339
